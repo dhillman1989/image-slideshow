@@ -1,0 +1,41 @@
+.slideshow {
+  display: flex;
+  align-items: stretch;
+
+  &__control {
+    background-color: rgb(66, 66, 66);
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    &:hover {
+      box-shadow: 0 0rem 0.2rem 0.2rem rgb(0, 0, 0);
+    }
+
+    &--prev {
+      border-radius: 2rem 0 0 2rem;
+    }
+    &--next {
+      border-radius: 0 2rem 2rem 0;
+    }
+  }
+
+  &__frame {
+    width: 800px;
+    overflow: hidden;
+    height: 600px;
+    position: relative;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
